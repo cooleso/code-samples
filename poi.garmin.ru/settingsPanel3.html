@@ -1,0 +1,119 @@
+<style type="text/css">
+    #settingsPanelHeaderName {
+        color: white;
+        float: left;
+        font-weight: bold;
+        margin-left: 5px;
+        margin-top: 2px;
+    }
+
+    #settingsPanelCloseImage {
+        background-image: url("images/close_on_10.png");
+        cursor: pointer;
+        float: left;
+        height: 10px;
+        margin-top: 5px;
+        position: absolute;
+        right: 5px;
+        width: 10px;
+    }
+
+    #settingsPanelCloseImage:hover {
+        background-image: url("images/close_of_10.png") !important;
+    }
+
+    #settingsPanelCloseText {
+
+        color: white;
+        cursor: pointer;
+        float: left;
+        font-size: 8pt;
+        margin-top: 3px;
+        position: absolute;
+        right: 4px;
+    }
+
+    .panelHeader {
+
+    }
+
+    #settingsPanelHeader {
+        background-color: #366097;
+        height: 20px;
+    }
+
+    #settingsPanelCloseText:hover {
+        color: #a9d0ff !important;
+    }
+
+    #settingsBtnApply .ui-button-text {
+        padding: 0.4em 0.6em;
+    }
+
+    #settingsBtnCancel .ui-button-text {
+        padding: 0.4em 0.6em;
+    }
+
+    #delBtn {
+        width: 140px;
+        margin: 0 10px 10px 5px;
+
+    }
+
+    #delBtn .ui-button-text {
+        padding: 0.1em 0.4em 0.1em 1.6em;
+    }
+
+    #delBtn .ui-button-icon-primary {
+        left: 0.1em;
+    }
+
+    #modulesDiv {
+        -margin: 5px;
+    }
+
+    #alertEditMoreSettings {
+        margin: 0 0 10px 5px;
+    }
+</style>
+
+<div id="settingsPanelHeader" class="ui-layout-north" style="height:23px;">
+    <div id="settingsPanelHeaderName"><%= panelHeader %></div>
+    <div id="settingsPanelCloseImage"></div>
+    <div style="clear: left"></div>
+</div>
+<div id="settingsPanel123" class="ui-widget ui-layout-center">
+    <div id="modulesDiv" class="ui-layout-content" style="margin-bottom: 10px;">
+        <div id="module_catSelector" style="margin-bottom:5px; display: none;"></div>
+        <div id="module_typeSelector" style="margin:5px; display: none;"></div>
+        <div id="module_helper" class="alertEditMenuModule ui-corner-all" style="display: none"></div>
+        <div id="module_coordinates" class="alertEditMenuModule ui-corner-all" style="display: none;"></div>
+        <div id="module_trailParams" class="alertEditMenuModule ui-corner-all" style="display: none;"></div>
+        <div id="module_proximity" class="alertEditMenuModule ui-corner-all" style="display: none;"></div>
+        <div id="module_minSpeed" class="alertEditMenuModule ui-corner-all" style="display: none;"></div>
+        <div id="module_circles" class="alertEditMenuModule ui-corner-all" style="display: none;"></div>
+        <div id="module_testModule" class="alertEditMenuModule ui-corner-all" style="display: none;"></div>
+        <div id="module_operationTime" class="alertEditMenuModule ui-corner-all" style="display: none;"></div>
+        <div id="module_radius" class="alertEditMenuModule ui-corner-all" style="display: none;"></div>
+        <div id="module_gallery" class="alertEditMenuModule ui-corner-all" style="display: none;"></div>
+        <div id="module_description" class="alertEditMenuModule ui-corner-all" style="display: none;"></div>
+        <div id="module_collections" class="alertEditMenuModule ui-corner-all" style="display: none;"></div>
+        <div id="alertEditAddCommentModule" class="alertEditMenuModule ui-corner-all">
+            <div style="float:left">
+                <input type="checkbox" id="alertEditAddComment">
+            </div>
+            <div style="margin-left:23px; font-weight: bold;">
+                <label for="alertEditAddComment">Добавить комментарий</label>
+            </div>
+            <div style="clear:left;"></div>
+            <textarea id="alertEditComment" class="text ui-widget-content ui-corner-all" cols="38" rows="2">Точка
+                промодерирована</textarea>
+        </div>
+        <div class="delBtn" id="delBtn"></div>
+        <div id="alertEditMoreSettings" class="link"></div>
+
+        <div id="settingsBtnApply" style="margin-top:10px; margin-left:10px;">Применить</div>
+        <div id="settingsBtnCancel" style="margin-top:10px; margin-left: 50px;">Отмена</div>
+
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<div id="wrap">
+    <div class="container" id="content">
+        <gt-head selected=0></gt-head>
+        <div class="navi-page">
+            <a class="gt-link selected" href="">Просмотр маршрута</a>
+        </div>
+        <div ng-show="routeNotFound">
+            <div class="jumbotron" style="margin-top:10px;">
+                <div class="container">
+                    <p>Маршрут не найден</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-hide="routeNotFound">
+            <div class="col-sm-4 scrolled" auto-height shift=autoHeightShifts.settings>
+                <h4 class="gt">{{ route.name }}</h4>
+                <div class="margin-bottom-small">
+                    <button class="btn btn-sm btn-default" ng-click="loadRoute()"><span class="glyphicon glyphicon-download-alt"></span> Загрузить в навигатор</button>
+                </div>
+                <div class="margin-bottom-small">
+                    <point-list can-edit-markers="false" route="route"></point-list>
+                </div>
+                <div class="margin-bottom-small">
+                    <summary ng-show="state.routeLoaded" route=route></summary>
+                </div>
+                <div class="margin-bottom-small">
+                    <h5><b>Описание маршрута</b></h5>
+
+                    <p>{{ route.descrshort }}</p>
+                </div>
+                <div class="margin-bottom-small">
+                    <span class="gt-caption">Автор: <span class="glyphicon glyphicon-user auth-control-icons"></span> {{ route.user.name }}</span>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <googlemap onclick="" style="height: 500px;" auto-height shift=autoHeightShifts.map>
+                    <city-control></city-control>
+                    <map-route route=route>
+                        <map-marker  can-edit=false ng-repeat="wayPoint in route.waypoints">
+                            <marker-panel>
+                                <poi-panel></poi-panel>
+                                <wp-panel></wp-panel>
+                                <rp-panel></rp-panel>
+                            </marker-panel>
+                        </map-marker>
+                        <!-- <trackpoint ng-repeat="point in route.point"></trackpoint> -->
+                    </map-route>
+                </googlemap>
+               <!-- <chart>
+                </chart> -->
+            </div>
+        </div>
+    </div>
+</div>
+<gt-footer></gt-footer>

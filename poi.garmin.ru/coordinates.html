@@ -1,0 +1,47 @@
+<style type="text/css">
+    #coordFormat .ui-button-text {
+        padding: 0.1em 0.3em;
+        font-size: 0.8em;
+    }
+
+    #coordFormatLabel {
+        font-size: 0.8em;
+        -font-weight: bold;
+        margin-top: 2px;
+        margin-right: 4px;
+    }
+</style>
+<table>
+    <tr>
+        <td>
+            <div class="marginLeft15"><b>Широта:</b></div>
+        </td>
+        <td>
+            <input type="text" class="text ui-widget-content ui-corner-all" value="0" name="lat" size="13"
+                   id="alertEditModuleLat">
+
+            <div id="alertEditModuleLatError" class="reg_field_error"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="marginLeft15"><b>Долгота:</b></div>
+        </td>
+        <td>
+            <input type="text" class="text ui-widget-content ui-corner-all" name="lng" value="0" size="13"
+                   id="alertEditModuleLng">
+
+            <div id="alertEditModuleLngError" class="reg_field_error"></div>
+        </td>
+    </tr>
+</table>
+<div style="margin-top:4px;">
+    <div style="float:left;" id="coordFormatLabel">Формат координат:</div>
+    <div id="coordFormat" style="float:left" style="margin-left:2px;">
+        <input type="radio" name="coordFormat" value="gradMin" id="coordFormatMinutes" checked="check">
+        <label for="coordFormatMinutes">ГГ ММ.МММ</label>
+        <input type="radio" name="coordFormat" value="gradDeg" id="coordFormatDeg">
+        <label for="coordFormatDeg">ГГ.ГГГГ</label>
+    </div>
+    <div style="clear:left"></div>
+</div>
